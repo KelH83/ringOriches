@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ring O' Riches</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+</head>
+<body onLoad="playRulesSound()">
+    <div class="main-container">
+        <div class="banner">
+            <a href="index.html"><img src="./images/banner.png" alt="banner image"/></a>
+        </div>
+        <div class="left">
+            <img src="./images/handcash.png" alt="hand holding cash image"/>
+        </div>
+        <div class="main">
+            <ol class="rules">
+                <li>You must spin before selecting a letter</li>
+                <br>
+                <li>If you select a consanent you will have the amount you spun added to your total multiplied by how many of that letter are in the word e.g: 3 F's x £250 spun = £750 total cash for that guess</li>
+                <br>
+                <li>If you pick a vowel it will cost you £50 per vowel selected that appear in the word e.g: if the are 4 E's it will cost you £200</li>
+                <br>
+                <li><ul><li>You can guess the answer at any time, if you guess correctly and there are still letters left you will win a bonus prize</li><br>
+                <li>If you fill all of the letters in before selecting "guess" you will still win your prize money but will not be eligible for the bonus prize</li><br>
+                <li>Guess incorrectly and you will go bankrupt and it will be game over.</li></ul></li>
+            </ol>
+            <a href="gamepage.html"><button>Start Game</button></a>
+        </div>
+        <div class="right">
+            <img src="./images/palmtree.png" alt="palm tree image"/>
+        </div>
+    </div>
+    <audio id="rulesSound"><source src="./audio/rules.mp3" type="audio/mpeg"></audio>
+
+    <script src="./main.js"></script>
+</body>
+</html>

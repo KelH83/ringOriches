@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ring O' Riches</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+</head>
+<body class="background">
+    <div class="game-container" id="main-game-area">
+        <div class="banner">
+            <a href="index.html"><img src="./images/banner.png" alt="banner image"/></a>
+        </div>
+        <div class="word">
+            <h2 class="word-box" id="A">_</h2><h2 class="word-box" id="C">_</h2><h2 class="word-box" id="T">_</h2><h2 class="word-box" id="I">_</h2><h2 class="word-box" id="O">_</h2><h2 class="word-box" id="N">_</h2><h2 class="word-box" id="S">_</h2><h2 class="word-box blank">A</h2><h2 class="word-box" id="S2">_</h2><h2 class="word-box" id="P">_</h2><h2 class="word-box" id="E">_</h2><h2 class="word-box" id="A2">_</h2><h2 class="word-box" id="K">_</h2>
+            <br><h2 class="word-box blank">A</h2><h2 class="word-box" id="L">_</h2><h2 class="word-box" id="O2">_</h2><h2 class="word-box" id="U">_</h2><h2 class="word-box" id="D">_</h2><h2 class="word-box" id="E2">_</h2><h2 class="word-box" id="R">_</h2><h2 class="word-box blank">A</h2><h2 class="word-box" id="T2">_</h2><h2 class="word-box" id="H">_</h2><h2 class="word-box" id="A3">_</h2><h2 class="word-box" id="N2">_</h2><h2 class="word-box blank">A</h2>
+            <br><h2 class="word-box blank">A</h2><h2 class="word-box blank">A</h2><h2 class="word-box blank">A</h2><h2 class="word-box blank">A</h2><h2 class="word-box" id="W">_</h2><h2 class="word-box" id="O3">_</h2><h2 class="word-box" id="R2">_</h2><h2 class="word-box" id="D2">_</h2><h2 class="word-box" id="S3">_</h2><h2 class="word-box blank">A</h2><h2 class="word-box blank">A</h2><h2 class="word-box blank">A</h2><h2 class="word-box blank">A</h2>
+        </div>
+        <div class="clue">
+            <h2 id="clueWord">CLUE: FAMOUS PHRASE</h2>
+        </div>
+        <div class="alphabet" id="flashRed">
+            <h3>Cash per letter: <span class="cashUpForGrabs"id="cashLetter">£0</span></h3>
+            <button class="alphabet-square" onClick="guess('A')" id="butA">A</button><button class="alphabet-square" onClick="guess('B')" id="butB">B</button><button class="alphabet-square" onClick="guess('C')" id="butC">C</button><button class="alphabet-square" onClick="guess('D')" id="butD">D</button><button class="alphabet-square" onClick="guess('E')" id="butE">E</button><button class="alphabet-square" onClick="guess('F')" id="butF">F</button><button class="alphabet-square" onClick="guess('G')" id="butG">G</button><button class="alphabet-square" onClick="guess('H')" id="butH">H</button><button class="alphabet-square" onClick="guess('I')" id="butI">I</button><button class="alphabet-square" onClick="guess('J')" id="butJ">J</button><button class="alphabet-square" onClick="guess('K')" id="butK">K</button><button class="alphabet-square" onClick="guess('L')" id="butL">L</button><button class="alphabet-square" onClick="guess('M')" id="butM">M</button><button class="alphabet-square" onClick="guess('N')" id="butN">N</button>
+            <br><button class="alphabet-square" onClick="guess('O')" id="butO">O</button><button class="alphabet-square" onClick="guess('P')" id="butP">P</button><button class="alphabet-square" onClick="guess('Q')" id="butQ">Q</button><button class="alphabet-square" onClick="guess('R')" id="butR">R</button><button class="alphabet-square" onClick="guess('S')" id="butS">S</button><button class="alphabet-square" onClick="guess('T')" id="butT">T</button><button class="alphabet-square" onClick="guess('U')" id="butU">U</button><button class="alphabet-square" onClick="guess('V')" id="butV">V</button><button class="alphabet-square" onClick="guess('W')" id="butW">W</button><button class="alphabet-square" onClick="guess('X')" id="butX">X</button><button class="alphabet-square" onClick="guess('Y')" id="butY">Y</button><button class="alphabet-square" onClick="guess('Z')" id="butZ">Z</button>
+            
+        </div>
+        <div class="wheel">
+            <span id="wheelImage"><img src="./images/1.png" alt="prize wheel image"/></span>
+
+            
+        </div>
+        <div class="game-buttons">
+            <button onClick="spin()">SPIN</button>
+            <button onClick="finalGuess()">GUESS</button>
+            <button>TOTAL: £<span id="totalCash"></span></button>
+        </div>
+     
+    </div>
+    <div id="finalAnswer1">
+        <h1>Congratulations! Your total winnings are £<span id="finalTotal1"></span></h1> 
+        <br>
+        <a href="index.html"><button class="play-again">Play again</button></a> 
+    </div>
+    <div id="finalAnswer2">
+        <h1>Congratulations! Your total winnings are £<span id="finalTotal2">0</span></h1> 
+        <h2>You guessed correctly which means you have won the bonus prize of a holiday to Hawaii!!!!</h2>
+        <img src="./images/holiday.jpg" alt="holiday image"/>   
+        <br>
+        <a href="index.html"><button class="play-again">Play again</button></a>   
+    </div>
+    <div id="bankrupt">
+        <h1>Uh Oh that was not the answer and now you are bankrupt. GAME OVER!!!</h1>
+        <img src="https://media.giphy.com/media/yIxNOXEMpqkqA/giphy.gif" alt="empty wallet gif"/>  
+        <br>
+        <a href="index.html"><button class="play-again">Play again</button></a> 
+    </div>
+    <audio id="correct"><source src="./audio/correct.mp3" type="audio/mpeg"></audio>
+    <audio id="incorrect"><source src="./audio/incorrect.mp3" type="audio/mpeg"></audio>
+    <audio id="bankruptSound"><source src="./audio/bankrupt.mp3" type="audio/mpeg"></audio>
+    <audio id="wheelSound"><source src="./audio/wheelturn.mp3" type="audio/mpeg"></audio>
+    <audio id="winnerSound"><source src="./audio/winner.mp3" type="audio/mpeg"></audio>
+    
+
+    <script src="./main.js"></script>
+</body>
+</html>

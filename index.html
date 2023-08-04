@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ring O' Riches</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+</head>
+<body onLoad="playStartingSound()">
+    <div class="main-container">
+        <div class="banner">
+            <a href="index.html"><img src="./images/banner.png" alt="banner image"/></a>
+        </div>
+        <div class="left">
+            <img src="./images/handcash.png" alt="hand holding cash image"/>
+        </div>
+        <div class="main">
+            <a href="gamepage.html"><button>Start Game</button></a>
+            <img src="./images/car.png" alt="car image"/>
+            <a href="rules.html"><h2>How to play</h2></a>
+        </div>
+        <div class="right">
+            <img src="./images/palmtree.png" alt="palm tree image"/>
+        </div>
+    </div>
+    <audio id="startingSound"><source src="./audio/themetune.mp3" type="audio/mpeg"></audio>
+
+    <script src="./main.js"></script>
+</body>
+</html>
