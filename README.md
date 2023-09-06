@@ -3,8 +3,13 @@ As part of the course we were placed into groups based on our preferred topic, o
 individual restaurant pages with the view of adding them to the delivery app. Unfortunately, we ran out of time so I created a basic delivery site that linked out to each of our restaurants. 
 As I finished my restaurant site quite quickly I also took the opportunity to create some additional sites for some of the other available topics, namely gaming and teaching.
 
+<b>My gaming site is based on the popular game show "wheel of fortune"</b><br>
+If I'd had more time I would have created an array of phrases with one randomly selected to guess and made it multiplayer like the actual show but this was just a side project I worked on
+so I ensured it was functional whilst focusing my efforts on the groups main task.
 
+<hr>
 <b>Project guidelines</b>
+
 You can create the web app of your dreams!! Anything you can think of, now’s your time to make it!
 
 You should:
